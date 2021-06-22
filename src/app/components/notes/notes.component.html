@@ -1,0 +1,27 @@
+<div class="main">
+    <h1>My Notes</h1>
+  
+    <label for="addNoteInput">New Note</label>
+  
+  <input
+    #newNote
+    placeholder="add a note"
+    class="lg-text-input"
+    id="addNoteInput"
+  />
+
+  <input
+  #author
+  placeholder="add author name"
+  class="lg-text-input"
+  id="addNoteAuthor"
+/>
+  
+  <button class="btn-primary" (click)="addNote()">Add</button>
+<!--     
+      <div  *ngFor="let item of notes">
+        {{item.message}} {{item.author}} {{item.createdOn}}
+      </div>
+    
+  </div>
+   -->

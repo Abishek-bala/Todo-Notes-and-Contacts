@@ -1,0 +1,18 @@
+<p>add-contacts works!</p>
+<h3>Reactive forms</h3>
+<form [formGroup]="form">
+    <label for="text">username</label>
+    <input type="text" class="form-control" id="userName" formControlName = "username">
+        <div formArrayName="contacts" *ngFor="let contact of contacts.controls; let i = index;" >
+            <div [formGroupName]="i">
+              email:<input formControlName="email" placeholder="email"><br>
+              Contact number:<input formControlName="contactNumber" placeholder="contact number"><br><br><br><br>
+              <button (click)="removeContact(i)">Remove</button>
+            </div>
+        
+        </div>
+    
+        <button (click)="addContacts()">add</button>
+        <button (click) = "showContacts()" routerLink = "/show-contacts">done</button>
+        <!-- <div *ngIf = "form.get('username').errors && form.get('username').errors['exists']" style="color:red;">username exists already!</div> -->
+</form>

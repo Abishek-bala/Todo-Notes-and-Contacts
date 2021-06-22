@@ -1,0 +1,13 @@
+<div>
+    <ul>
+        <div  *ngFor="let item of todoItems">
+           <div *ngIf="item.done">  {{item.description}} {{item.author}} {{item.createdOn}} <input type="checkbox" id = "jobDone" (change)="onJobDone(item)"/> </div>
+        </div>
+      </ul>
+    
+</div>
+
+<div  *ngFor="let item of notes">
+    {{item.message}} {{item.author}} {{item.createdOn}}
+  </div>
+

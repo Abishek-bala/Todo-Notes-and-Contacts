@@ -1,0 +1,14 @@
+<p>show-contacts works!</p>
+<table>
+    <tr>
+        <td class="table-header-name">Name</td>
+        <td class="table-header">email</td>
+        <td class="table-header">Contact number</td>
+    </tr>
+        <tr  *ngFor="let contact of contacts">
+            <td class="contact-element">{{contact.userName}}</td>
+            <td class="contact-element">{{contact.userEmail}}</td>
+            <td class="contact-element">{{contact.userContactNumber}}</td>
+        </tr>
+
+</table>
